@@ -1,4 +1,11 @@
 $(document).ready(() => {
+    
+    let questionsArray = [];
+    $('#container').children().each(function() {
+        questionsArray.push($(this).find('#questHeader').text());
+    })
+        
+        console.log(questionsArray)
 
 
     $('.incorrect-1').on('click', () =>{
