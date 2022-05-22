@@ -29,11 +29,12 @@ main {
 
 .card {
     width: 500px;
-    margin: 0 500px;
 }
 
 #top-filler {
-    margin: 250px 150px 0 150px;
+    margin-top: 250px;
+    display: inline-block;
+    width: 800px;
 }
 
 #question {
@@ -47,16 +48,17 @@ main {
     border-left: 2px solid black;
     padding: 10px 0;
     background-color: grey;
+    width: 100%;
 }
 
 .answer h1 {
     padding-left: 10px;
 }
 
-.active {
+.active-1 {
     background-color: red;
 }
 
-.active2 {
+.active-2 {
     background-color: rgb(33, 207, 33);
 }
