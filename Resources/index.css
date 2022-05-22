@@ -7,7 +7,7 @@ html {
 
 main {
     position: relative;
-    top: 100px;
+    top: 115px;
 }
 
 
@@ -26,18 +26,34 @@ main {
 
 /* quiz section */
 
+#container {
+    width: 100%;
+    padding: 100px 0;
+}
+
 
 .card {
     width: 500px;
 }
 
-#top-filler {
-    margin-top: 250px;
-    display: inline-block;
+#question1 {
+    display: flex;
+    flex-direction: column;
     width: 800px;
+    align-items: center;
+    margin: 25px auto;
 }
 
-#question {
+#question2 {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    align-items: center;
+    margin: 25px auto;
+    display: none;
+}
+
+#questHeader {
     text-align: center;
     border: 3px solid black;
 }
@@ -51,9 +67,6 @@ main {
     width: 100%;
 }
 
-.answer h1 {
-    padding-left: 10px;
-}
 
 .active-1 {
     background-color: red;
@@ -61,4 +74,18 @@ main {
 
 .active-2 {
     background-color: rgb(33, 207, 33);
+}
+
+.gjta {
+    background-color: gray;
+    text-align: center;
+    width: 100%;
+}
+
+#goodJob {
+    display: none;
+}
+
+#tryAgain {
+    display: none;
 }
