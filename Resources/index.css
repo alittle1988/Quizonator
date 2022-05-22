@@ -51,6 +51,15 @@ main {
     display: none;
 }
 
+.question3 {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    align-items: center;
+    margin: 25px auto;
+    display: none;
+}
+
 #questHeader {
     text-align: center;
     border: 3px solid black;

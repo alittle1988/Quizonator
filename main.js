@@ -25,12 +25,20 @@ $(document).ready(() => {
         $('.goodJob').show()
     }).on('click', () => {
         $('.tryAgain').hide()
+    }).on('click', () => {
+        $('.incorrect-1').removeClass('active-1')
+    }).on('click', () => {
+        $('.incorrect-2').removeClass('active-1')
+    }).on('click', () => {
+        $('.incorrect-3').removeClass('active-1')
     })
+    
 
+    
     $('.nextQuest').on('click', () => {
         $('.question1').hide()
     }).on('click', () => {
-        $('.question2').delay(1000).css('display', 'flex')
+        $('.question2').css('display', 'flex')
     }).on('click', () => {
         $('.incorrect-1').removeClass('active-1')
     }).on('click', () => {
@@ -44,6 +52,8 @@ $(document).ready(() => {
     }).on('click', () => {
         $('.tryAgain').hide()
     })
+
+    
     
 
 
