@@ -1,0 +1,62 @@
+/* Universal section */
+html {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    position: relative;
+    top: 100px;
+}
+
+
+
+
+/* Header Section*/
+
+.nav-link {
+    color: white;
+}
+
+#title {
+    font-size:  3rem;
+    padding-left: 3rem;
+}
+
+/* quiz section */
+
+
+.card {
+    width: 500px;
+    margin: 0 500px;
+}
+
+#top-filler {
+    margin: 250px 150px 0 150px;
+}
+
+#question {
+    text-align: center;
+    border: 3px solid black;
+}
+
+.answer {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    padding: 10px 0;
+    background-color: grey;
+}
+
+.answer h1 {
+    padding-left: 10px;
+}
+
+.active {
+    background-color: red;
+}
+
+.active2 {
+    background-color: rgb(33, 207, 33);
+}
