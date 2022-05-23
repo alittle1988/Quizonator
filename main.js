@@ -1,56 +1,28 @@
 $(document).ready(() => {
     
-    let questionsArray = [];
-    $('#container').children().each(function() {
-        questionsArray.push($(this).find('#questHeader').text());
-    })
-        
-        console.log(questionsArray)
+    const questionArray = ['What is 2 + 2?', 'What is 3 + 3?','What is 4 + 4?', 'What is 5 + 6?', 'What is 6 + 6?'];
+    const answerArray = [4, 6, 8, 11, 12]
+    const wrongAnswer = Math.floor(Math.random() * 19)
+
+    document.getElementById("question-text").innerHTML = questionArray[0];
+    document.getElementById("correct").innerHTML = answerArray[0];
+    
+
+    const getWrongAnswer = () => {
+        return Math.floor(Math.random() * 19)
+    };
 
 
-    $('.incorrect-1').on('click', () =>{
-        $('.incorrect-1').toggleClass('active-1')
-    }).on('click', () => {
-        $('.tryAgain').show();
-    })
+    document.getElementById('wrongAnswer').innerHTML = getWrongAnswer();
+    document.getElementById('wrongAnswer2').innerHTML = getWrongAnswer();
+    document.getElementById('wrongAnswer3').innerHTML = getWrongAnswer();
 
-    $('.incorrect-2').on('click', () => {
-        $('.incorrect-2').toggleClass('active-1');
-    }).on('click', () => {
-        $('.tryAgain').show();
-    })
+    if(document.getElementById('wrongAnswer1') === document.getElementById('correct')) {
+        document.getElementById('wrongAnswer').innerHTML = getWrongAnswer();
+    }
 
-    $('.incorrect-3').on('click', () => {
-        $('.incorrect-3').toggleClass('active-1');
-    }).on('click', () => {
-        $('.tryAgain').show();
-    });
 
-    $('.correct').on('click', () => {
-        $('.correct').toggleClass('active-2')
-    }).on('click', () => {
-        $('.goodJob').show()
-    }).on('click', () => {
-        $('.tryAgain').hide()
-    })
 
-    $('.nextQuest').on('click', () => {
-        $('.question1').hide()
-    }).on('click', () => {
-        $('.question2').delay(1000).css('display', 'flex')
-    }).on('click', () => {
-        $('.incorrect-1').removeClass('active-1')
-    }).on('click', () => {
-        $('.incorrect-2').removeClass('active-1')
-    }).on('click', () => {
-        $('.incorrect-3').removeClass('active-1')
-    }).on('click', () => {
-        $('.correct').removeClass('active-2')
-    }).on('click', () => {
-        $('.goodJob').hide()
-    }).on('click', () => {
-        $('.tryAgain').hide()
-    })
     
 
 
