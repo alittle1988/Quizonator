@@ -5,28 +5,64 @@ $(document).ready(() => {
     const wrongAnswer = []
 
     document.getElementById("question-text").innerHTML = questionArray[0];
-    document.getElementById("correct-1").innerHTML = answerArray[0];
+    let correctAnswer = document.getElementById("correct-1").innerHTML = answerArray[0];
+    let wrongAnswer1 = '';
+    let wrongAnswer2 = '';
+    let wrongAnswer3 = '';
     
     
-    // not generating new numbers because array is already 3 in length
-    const getWrongAnswers = () => {
+    //let wrongAnswer1 = '';
+    
+    
+    
+    /*const getWrongAnswers = () => {
         while (wrongAnswer.length < 50) {
         let wrongAnswer1 = Math.floor(Math.random() * 29)
         wrongAnswer.push(wrongAnswer1)
     }}
     
     getWrongAnswers()
-
-    const assignWrongAnswers = () => {
-        
+*/
+    const getWrongAnswers = () => {
+        for(i = 0; i < 100; i++) {
+            wrongAnswer.push(i)
+        }
+    }
+    //getWrongAnswers()
+    
+    function assignWrongAnswers()  {
+        wAnswer = Math.floor(Math.random() * 10).toString();
+        if(wAnswer === correctAnswer) {
+            do {
+                wAnswer = Math.floor(Math.random() * 10)
+            } while (wAnswer === correctAnswer);
+            return wAnswer
+        } 
+        else {
+        return wAnswer
+        }
+     
     }
 
+    wrongAnswer1 = assignWrongAnswers();
+    wrongAnswer2 = assignWrongAnswers();
+    wrongAnswer3 = assignWrongAnswers();
+    if(wrongAnswer2 === wrongAnswer1) {
+        wrongAnswer2 = assignWrongAnswers()
+    } else if (wrongAnswer3 === wrongAnswer1 || wrongAnswer2) {
+        wrongAnswer3 = assignWrongAnswers()
+    }
 
+    
+    document.getElementById('wrongAnswer1').innerHTML = wrongAnswer1
+    document.getElementById('wrongAnswer2').innerHTML = wrongAnswer2
+    document.getElementById('wrongAnswer3').innerHTML = wrongAnswer3
 
+    
 
-        document.getElementById('wrongAnswer1').innerHTML = wrongAnswer[0]
-        document.getElementById('wrongAnswer2').innerHTML = wrongAnswer[1]
-        document.getElementById('wrongAnswer3').innerHTML = wrongAnswer[2]
+    
+
+        
 
     const moveToNextQuestion = () => {
         if(document.getElementById("question-text").innerHTML === questionArray[0]){
