@@ -4,40 +4,23 @@ $(document).ready(() => {
     const answerArray = ["4", "6", "8", "10", "12", "14", "16", "18", "20", "22"]
     const wrongAnswer = []
 
+    // assigning questions and answers to element ID
     document.getElementById("question-text").innerHTML = questionArray[0];
     let correctAnswer = document.getElementById("correct-1").innerHTML = answerArray[0];
     let wrongAnswer1 = '';
     let wrongAnswer2 = '';
     let wrongAnswer3 = '';
     
-    
-    //let wrongAnswer1 = '';
-    
-    
-    
-    /*const getWrongAnswers = () => {
-        while (wrongAnswer.length < 50) {
-        let wrongAnswer1 = Math.floor(Math.random() * 29)
-        wrongAnswer.push(wrongAnswer1)
-    }}
-    
-    getWrongAnswers()
-*/
-    const getWrongAnswers = () => {
-        for(i = 0; i < 100; i++) {
-            wrongAnswer.push(i)
-        }
-    }
-    //getWrongAnswers()
+    // getting wrong answers
     
     function assignWrongAnswers()  {
-        wAnswer = Math.floor(Math.random() * 10).toString();
+        wAnswer = Math.floor(Math.random() * 20).toString();
         if(wAnswer === correctAnswer) {
             do {
-                wAnswer = Math.floor(Math.random() * 10)
+                wAnswer = Math.floor(Math.random() * 20)
             } while (wAnswer === correctAnswer);
             return wAnswer
-        } 
+        }
         else {
         return wAnswer
         }
@@ -47,13 +30,9 @@ $(document).ready(() => {
     wrongAnswer1 = assignWrongAnswers();
     wrongAnswer2 = assignWrongAnswers();
     wrongAnswer3 = assignWrongAnswers();
-    if(wrongAnswer2 === wrongAnswer1) {
-        wrongAnswer2 = assignWrongAnswers()
-    } else if (wrongAnswer3 === wrongAnswer1 || wrongAnswer2) {
-        wrongAnswer3 = assignWrongAnswers()
-    }
-
     
+
+    //Assigning wrong answers to an element ID
     document.getElementById('wrongAnswer1').innerHTML = wrongAnswer1
     document.getElementById('wrongAnswer2').innerHTML = wrongAnswer2
     document.getElementById('wrongAnswer3').innerHTML = wrongAnswer3
@@ -63,7 +42,7 @@ $(document).ready(() => {
     
 
         
-
+    // moving question to next element in questionArray
     const moveToNextQuestion = () => {
         if(document.getElementById("question-text").innerHTML === questionArray[0]){
             document.getElementById("question-text").innerHTML = questionArray[0 + 1];
@@ -87,7 +66,7 @@ $(document).ready(() => {
             document.getElementById("question-text").innerHTML = questionArray[9 + 1];
         }
     }
-
+    // moving answer to next element in answerArray
     const moveToNextAnswer = () => {
         if(document.getElementById("correct-1").innerHTML === answerArray[0]){
             document.getElementById("correct-1").innerHTML = answerArray[0 + 1];
@@ -114,7 +93,7 @@ $(document).ready(() => {
 
 
 
-
+    // adding class to  incorrect answer when clicked
     $('.incorrect-1').on('click', () => {
         $('.incorrect-1').addClass('active-1');
     }).on('click', () => {
@@ -132,7 +111,7 @@ $(document).ready(() => {
     }).on('click', () => {
         $('.tryAgain').show()
     })
-
+    // adding class to correct answer when clicked
     $('.correct').on('click', () => {
         $('.correct').addClass('active-2');
     }).on('click', () => {
@@ -140,13 +119,10 @@ $(document).ready(() => {
     }).on('click', () => {
         $('.tryAgain').hide();
     })
-
+    //moving to next question when clicked
     $('.nextQuest').on('click', () => {
         moveToNextQuestion();
         moveToNextAnswer();
-
-        
-
     }).on('click', () => {
         $('.incorrect-1').removeClass('active-1');
         $('.incorrect-2').removeClass('active-1');
