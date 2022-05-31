@@ -26,7 +26,7 @@ $(document).ready(() => {
         }
      
     }
-
+    
     wrongAnswer1 = assignWrongAnswers();
     wrongAnswer2 = assignWrongAnswers();
     wrongAnswer3 = assignWrongAnswers();
@@ -37,11 +37,11 @@ $(document).ready(() => {
     document.getElementById('wrongAnswer2').innerHTML = wrongAnswer2
     document.getElementById('wrongAnswer3').innerHTML = wrongAnswer3
 
-    
-
-    
+  
 
         
+    
+    
     // moving question to next element in questionArray
     const moveToNextQuestion = () => {
         if(document.getElementById("question-text").innerHTML === questionArray[0]){
@@ -92,7 +92,7 @@ $(document).ready(() => {
     }
 
 
-
+ 
     // adding class to  incorrect answer when clicked
     $('.incorrect-1').on('click', () => {
         $('.incorrect-1').addClass('active-1');
@@ -129,7 +129,7 @@ $(document).ready(() => {
         $('.incorrect-3').removeClass('active-1');
         $('.correct').removeClass('active-2');
         $('.goodJob').hide()
-        $('.tryAgain').hide()
+        $('.tryAgain').hide() 
     })
 
     
