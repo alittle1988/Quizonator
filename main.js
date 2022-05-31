@@ -7,9 +7,7 @@ $(document).ready(() => {
     // assigning questions and answers to element ID
     document.getElementById("question-text").innerHTML = questionArray[0];
     let correctAnswer = document.getElementById("correct-1").innerHTML = answerArray[0];
-    let wrongAnswer1 = '';
-    let wrongAnswer2 = '';
-    let wrongAnswer3 = '';
+    
     
     // getting wrong answers
     
@@ -27,9 +25,9 @@ $(document).ready(() => {
      
     }
     
-    wrongAnswer1 = assignWrongAnswers();
-    wrongAnswer2 = assignWrongAnswers();
-    wrongAnswer3 = assignWrongAnswers();
+    let wrongAnswer1 = assignWrongAnswers();
+    let wrongAnswer2 = assignWrongAnswers();
+    let wrongAnswer3 = assignWrongAnswers();
     
 
     //Assigning wrong answers to an element ID
