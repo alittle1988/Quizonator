@@ -91,9 +91,6 @@ $(document).ready(() => {
         $('.goodJob').hide()
         $('.tryAgain').hide() 
     }).on('click', () => {
-        $('#wrongAnswer1').replaceWith('#correct-1');
-        $('.incorrect-1').replaceWith()
-    }).on('click', () => {
         moveToNext('correct-1', answerArray);
         moveToNext('question-text', questionArray)
         moveToNext('wrongAnswer1', q1WrongAnswer);
