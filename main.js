@@ -12,25 +12,6 @@ $(document).ready(() => {
     document.getElementById("question-text").innerHTML = questionArray[0];
     let correctAnswer = document.getElementById("correct-1").innerHTML = answerArray[0];
     
-    
-    
-    
-    // getting wrong answers
-    
-    /*function assignWrongAnswers()  {
-        wAnswer = Math.floor(Math.random() * 20).toString();
-        if(wAnswer === correctAnswer) {
-            do {
-                wAnswer = Math.floor(Math.random() * 20)
-            } while (wAnswer === correctAnswer);
-            return wAnswer
-        }
-        else {
-        return wAnswer
-        }
-    
-    }
-    */
 
 
     let wrongAnswer1 = q1WrongAnswer[0]
@@ -109,6 +90,9 @@ $(document).ready(() => {
         $('.correct').removeClass('active-2');
         $('.goodJob').hide()
         $('.tryAgain').hide() 
+    }).on('click', () => {
+        $('#wrongAnswer1').replaceWith('#correct-1');
+        $('.incorrect-1').replaceWith()
     }).on('click', () => {
         moveToNext('correct-1', answerArray);
         moveToNext('question-text', questionArray)
