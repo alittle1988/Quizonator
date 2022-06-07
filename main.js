@@ -54,42 +54,30 @@ $(document).ready(() => {
         
     }
 
-    function  moveDiv(old, replace) {
-        old.replaceWith(replace)
-        $('.question').append(old)
-    }
-    /*$('.nextQuest').click(function (evt) {
-        let $div = $(evt.target).closest('.answer');
-        $div.next('.answer').after($div);
-    })*/
-
+    
+   
 
 
  
     // adding class to  incorrect answer when clicked
     $('.incorrect-1').on('click', () => {
         $('.incorrect-1').addClass('active-1');
-    }).on('click', () => {
-        $('.tryAgain').show()
+        $('.tryAgain').show();
     })
 
     $('.incorrect-2').on('click', () => {
         $('.incorrect-2').addClass('active-1');
-    }).on('click', () => {
         $('.tryAgain').show()
     })
 
     $('.incorrect-3').on('click', () => {
         $('.incorrect-3').addClass('active-1');
-    }).on('click', () => {
-        $('.tryAgain').show()
+        $('.tryAgain').show();
     })
     // adding class to correct answer when clicked
     $('.correct').on('click', () => {
         $('.correct').addClass('active-2');
-    }).on('click', () => {
         $('.goodJob').show();
-    }).on('click', () => {
         $('.tryAgain').hide();
     })
     //moving to next question when clicked
@@ -100,22 +88,63 @@ $(document).ready(() => {
         $('.correct').removeClass('active-2');
         $('.goodJob').hide()
         $('.tryAgain').hide()
-
-    }).on('click', () => {
         moveToNext('correct-1', answerArray);
         moveToNext('question-text', questionArray)
         moveToNext('wrongAnswer1', q1WrongAnswer);
         moveToNext('wrongAnswer2', q2WrongAnswer);
         moveToNext('wrongAnswer3', q3WrongAnswer);
-    }).on('click', (event) => {
-        moveDiv($('.incorrect-1'), $('.correct'))
-        
-        //$('.incorrect-1').next().replaceWith($('.correct')).after($('.incorrect-1'))
-       
-        
+    }).on('click', () => {
+        rotateDiv($('.correct').html())
+
     })
 
+    function  moveDiv(old, replace) {
+        old.replaceWith(replace)
+       
+
+       $('.question').append(old)
+    }
     
 
+    function rotateDiv(pra) {
+        
+        switch(pra) {
+            case answerArray[0]:
+                moveDiv($('.incorrect-2'), $('.correct'));
+                break;
+            case answerArray[1]:
+                moveDiv($('.incorrect-1'), $('.correct'));
+                break;
+            case answerArray[2]:
+                moveDiv($('.incorrect-3'), $('.correct'));
+                break;
+            case answerArray[3]:
+                moveDiv($('.incorrect-2'), $('.correct'));
+                break;
+            case answerArray[4]:
+                moveDiv($('.incorrect-3'), $('.correct'));
+                break;
+            case answerArray[5]:
+                moveDiv($('.incorrect-2'), $('.correct'));
+                break;
+            case answerArray[6]:
+                moveDiv($('.incorrect-3'), $('.correct'));
+                break;
+            case answerArray[7]:
+                moveDiv($('.incorrect-1'), $('.correct'));
+                break;
+            case answerArray[8]:
+                moveDiv($('.incorrect-3'), $('.correct'));
+                break;
+            case answerArray[9]:
+                moveDiv($('.incorrect-1'), $('.correct'));
+                break;
+            default:
+                $('.gjta').hide()
 
+
+        }
+    }
+
+        
 });
