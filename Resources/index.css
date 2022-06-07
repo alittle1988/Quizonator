@@ -39,7 +39,7 @@ main {
     flex-direction: column;
     width: 800px;
     align-items: center;
-    margin: 25px auto;
+    margin: 0 auto;
 }
 
 .question2 {
@@ -49,6 +49,14 @@ main {
     align-items: center;
     margin: 25px auto;
     display: none;
+}
+
+.gjta {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    align-items: center;
+    margin: 0 auto;
 }
 
 #questHeader {

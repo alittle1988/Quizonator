@@ -109,6 +109,7 @@ $(document).ready(() => {
         moveToNext('wrongAnswer3', q3WrongAnswer);
     }).on('click', (event) => {
         moveDiv($('.incorrect-1'), $('.correct'))
+        
         //$('.incorrect-1').next().replaceWith($('.correct')).after($('.incorrect-1'))
        
         
