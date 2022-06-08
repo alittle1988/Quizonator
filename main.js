@@ -60,17 +60,17 @@ $(document).ready(() => {
 
  
     // adding class to  incorrect answer when clicked
-    $('.incorrect-1').on('click', () => {
+    $('.question').on('click', '.incorrect-1', () => {
         $('.incorrect-1').addClass('active-1');
         $('.tryAgain').show();
     })
 
-    $('.incorrect-2').on('click', () => {
+    $('.question').on('click', '.incorrect-2', () => {
         $('.incorrect-2').addClass('active-1');
         $('.tryAgain').show()
     })
 
-    $('.incorrect-3').on('click', () => {
+    $('.question').on('click', '.incorrect-3', () => {
         $('.incorrect-3').addClass('active-1');
         $('.tryAgain').show();
     })
