@@ -1,6 +1,6 @@
 $(document).ready(() => {
     
-    const questionArray = ['What is 2 + 2?', 'What is 3 + 3?','What is 4 + 4?', 'What is 5 + 5?', 'What is 6 + 6?', 'What is 7 + 7?', 'What is 8 + 8?', 'What is 9 + 9?', 'What is 10 + 10?', 'What is 11 + 11?', 'Congrats you finished the Test 🎉'];
+    const questionArray = ['What is 2 + 2?', 'What is 3 + 3?','What is 4 + 4?', 'What is 5 + 5?', 'What is 6 + 6?', 'What is 7 + 7?', 'What is 8 + 8?', 'What is 9 + 9?', 'What is 10 + 10?', 'What is 11 + 11?', 'Congrats you have finished🎉'];
     const answerArray = ["4", "6", "8", "10", "12", "14", "16", "18", "20", "22"]
     const q1WrongAnswer = ['6', '8', '2', '5', '4', '7', '13', '9', '10', '11']
     const q2WrongAnswer = ['5', '3', '9', '0', '8', '13', '15', '19', '30', '7']
@@ -50,9 +50,11 @@ $(document).ready(() => {
             document.getElementById(location).innerHTML = array[9];
         } else if (document.getElementById(location).innerHTML === array[9]) {
             document.getElementById(location).innerHTML = array[10];
+        } 
+
         }
         
-    }
+    
 
     
    
@@ -84,7 +86,7 @@ $(document).ready(() => {
         $('.tryAgain').show();}
     })
     // adding class to correct answer when clicked
-    $('.correct').on('click', () => {
+    $('.question').on('click', '.correct', () => {
         $('.correct').addClass('active-2');
         $('.goodJob').show();
         $('.tryAgain').hide();
@@ -97,20 +99,16 @@ $(document).ready(() => {
         $('.correct').removeClass('active-2');
         $('.goodJob').hide()
         $('.tryAgain').hide()
+        rotateDiv($('.correct').html())
         moveToNext('correct-1', answerArray);
         moveToNext('question-text', questionArray)
         moveToNext('wrongAnswer1', q1WrongAnswer);
         moveToNext('wrongAnswer2', q2WrongAnswer);
         moveToNext('wrongAnswer3', q3WrongAnswer);
-    }).on('click', () => {
-        rotateDiv($('.correct').html())
-
     })
 
     function  moveDiv(old, replace) {
         old.replaceWith(replace)
-       
-
        $('.question').append(old)
     }
     
@@ -119,13 +117,13 @@ $(document).ready(() => {
         
         switch(pra) {
             case answerArray[0]:
-                moveDiv($('.incorrect-2'), $('.correct'));
-                break;
-            case answerArray[1]:
                 moveDiv($('.incorrect-1'), $('.correct'));
                 break;
-            case answerArray[2]:
+            case answerArray[1]:
                 moveDiv($('.incorrect-3'), $('.correct'));
+                break;
+            case answerArray[2]:
+                moveDiv($('.correct'), $('.incorrect-1'));
                 break;
             case answerArray[3]:
                 moveDiv($('.incorrect-2'), $('.correct'));
@@ -134,24 +132,20 @@ $(document).ready(() => {
                 moveDiv($('.incorrect-3'), $('.correct'));
                 break;
             case answerArray[5]:
-                moveDiv($('.incorrect-2'), $('.correct'));
+                moveDiv($('.correct'), $('.incorrect-1'));
                 break;
             case answerArray[6]:
-                moveDiv($('.incorrect-3'), $('.correct'));
+                moveDiv($('.incorrect-1'), $('.correct'));
                 break;
             case answerArray[7]:
-                moveDiv($('.incorrect-1'), $('.correct'));
-                break;
-            case answerArray[8]:
                 moveDiv($('.incorrect-3'), $('.correct'));
                 break;
-            case answerArray[9]:
-                moveDiv($('.incorrect-1'), $('.correct'));
+            case answerArray[8]:
+                moveDiv($('.correct'), $('.incorrect-1'));
                 break;
-            default:
-                $('.gjta').hide()
-
-
+            case answerArray[9]:
+                moveDiv($('.correct'), $('.incorrect-2'));
+                break;
         }
     }
 
