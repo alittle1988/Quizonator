@@ -61,18 +61,27 @@ $(document).ready(() => {
  
     // adding class to  incorrect answer when clicked
     $('.question').on('click', '.incorrect-1', () => {
+        if ($('.correct').hasClass('active-2')){
+           
+        } else {
         $('.incorrect-1').addClass('active-1');
-        $('.tryAgain').show();
+        $('.tryAgain').show();}
     })
 
     $('.question').on('click', '.incorrect-2', () => {
+        if ($('.correct').hasClass('active-2')){
+           
+        } else {
         $('.incorrect-2').addClass('active-1');
-        $('.tryAgain').show()
+        $('.tryAgain').show()}
     })
 
     $('.question').on('click', '.incorrect-3', () => {
+        if ($('.correct').hasClass('active-2')){
+           
+        } else {
         $('.incorrect-3').addClass('active-1');
-        $('.tryAgain').show();
+        $('.tryAgain').show();}
     })
     // adding class to correct answer when clicked
     $('.correct').on('click', () => {
