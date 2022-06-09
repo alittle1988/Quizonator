@@ -98,13 +98,8 @@ $(document).ready(() => {
         $('.incorrect-3').removeClass('active-1');
         $('.correct').removeClass('active-2');
         $('.goodJob').hide()
-<<<<<<< HEAD
-        $('.tryAgain').hide() 
-    }).on('click', () => {
-=======
         $('.tryAgain').hide()
         rotateDiv($('.correct').html())
->>>>>>> trying-to-randomize-the-answers-location
         moveToNext('correct-1', answerArray);
         moveToNext('question-text', questionArray)
         moveToNext('wrongAnswer1', q1WrongAnswer);
@@ -112,10 +107,6 @@ $(document).ready(() => {
         moveToNext('wrongAnswer3', q3WrongAnswer);
     })
 
-<<<<<<< HEAD
-
-});
-=======
     function  moveDiv(old, replace) {
         old.replaceWith(replace)
        $('.question1').append(old)
@@ -160,4 +151,3 @@ $(document).ready(() => {
 
             
 });
->>>>>>> trying-to-randomize-the-answers-location
