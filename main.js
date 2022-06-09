@@ -98,15 +98,15 @@ $(document).ready(() => {
         $('.incorrect-3').removeClass('active-1');
         $('.correct').removeClass('active-2');
         $('.goodJob').hide()
-        $('.tryAgain').hide() 
-    }).on('click', () => {
+        $('.tryAgain').hide()
+        rotateDiv($('.correct').html()) 
         moveToNext('correct-1', answerArray);
         moveToNext('question-text', questionArray)
         moveToNext('wrongAnswer1', q1WrongAnswer);
         moveToNext('wrongAnswer2', q2WrongAnswer);
         moveToNext('wrongAnswer3', q3WrongAnswer);
-    })
 
+    })
 
 
 
