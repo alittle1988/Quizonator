@@ -62,7 +62,7 @@ $(document).ready(() => {
 
  
     // adding class to  incorrect answer when clicked
-    $('.question').on('click', '.incorrect-1', () => {
+    $('.question1').on('click', '.incorrect-1', () => {
         if ($('.correct').hasClass('active-2')){
            
         } else {
@@ -70,7 +70,7 @@ $(document).ready(() => {
         $('.tryAgain').show();}
     })
 
-    $('.question').on('click', '.incorrect-2', () => {
+    $('.question1').on('click', '.incorrect-2', () => {
         if ($('.correct').hasClass('active-2')){
            
         } else {
@@ -78,7 +78,7 @@ $(document).ready(() => {
         $('.tryAgain').show()}
     })
 
-    $('.question').on('click', '.incorrect-3', () => {
+    $('.question1').on('click', '.incorrect-3', () => {
         if ($('.correct').hasClass('active-2')){
            
         } else {
@@ -86,7 +86,7 @@ $(document).ready(() => {
         $('.tryAgain').show();}
     })
     // adding class to correct answer when clicked
-    $('.question').on('click', '.correct', () => {
+    $('.question1').on('click', '.correct', () => {
         $('.correct').addClass('active-2');
         $('.goodJob').show();
         $('.tryAgain').hide();
