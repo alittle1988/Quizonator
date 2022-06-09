@@ -37,7 +37,7 @@ main {
 .question1 {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 80%;
     align-items: center;
     margin: 0 auto;
     text-align: center;
@@ -46,7 +46,7 @@ main {
 .gjta {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 80%;
     align-items: center;
     margin: 0 auto;
     background-color: gray;
@@ -60,7 +60,7 @@ main {
 #questHeader {
     text-align: center;
     border: 3px solid black;
-    width: 500px;
+    width: 100%;
 }
 
 .answer {
@@ -70,7 +70,7 @@ main {
     border-left: 2px solid black;
     padding: 10px 0;
     background-color: grey;
-    width: 500px;
+    width: 100%;
     font-weight: bold;
 }
 
@@ -97,7 +97,7 @@ main {
 .disclaimer {
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 80%;
     align-items: center;
     margin: 50px auto;
     color: red;
