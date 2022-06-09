@@ -1,10 +1,68 @@
 $(document).ready(() => {
+
+    //starting video tutorial
+
+
+    let questions = [
+        {
+            prompt: "what is 2 + 2?\n(A) 2\n\ (B) 6\n(C) 5\n(D) 2",
+            answer: "A"
+        },
+        {
+            prompt: "what is 3 + 3?\n(A) 8\n\ (B) 3\n(C) 9\n(D) 6",
+            answer: "D"
+        },
+        {
+            prompt: "what is 4 + 4?\n(A) 2\n\ (B) 8\n(C) 5\n(D) 2",
+            answer: "B"
+        },
+        {
+            prompt: "what is 5 + 5?\n(A) 2\n\ (B) 6\n(C) 10\n(D) 2",
+            answer: "C"
+        },
+        {
+            prompt: "what is 6 + 6?\n(A) 2\n\ (B) 12\n(C) 5\n(D) 2",
+            answer: "B"
+        },
+    ]
+
+    let score = 0;
+
+    for(let i=0; i < questions.length; i++){
+        let response = window.prompt(questions[i].prompt);
+        if(response === questions[i].answer) {
+            score++;
+            alert('correct!');
+        } else {
+            alert('WRONG');
+        }
+    }
+    alert('you got ' + score + '/' + questions.length)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
+    /*
     const questionArray = ['What is 2 + 2?', 'What is 3 + 3?','What is 4 + 4?', 'What is 5 + 5?', 'What is 6 + 6?', 'What is 7 + 7?', 'What is 8 + 8?', 'What is 9 + 9?', 'What is 10 + 10?', 'What is 11 + 11?', 'Congrats you have finished🎉'];
     const answerArray = ["4", "6", "8", "10", "12", "14", "16", "18", "20", "22"]
     const q1WrongAnswer = ['6', '8', '2', '5', '4', '7', '13', '9', '10', '11']
     const q2WrongAnswer = ['5', '3', '9', '0', '8', '13', '15', '19', '30', '7']
     const q3WrongAnswer = ['2', '9', '4', '8', '10','11', '12', '16', '15', '21']
+    let score = 0;
    
 
 
@@ -153,5 +211,5 @@ $(document).ready(() => {
         }
     }
 
-            
+          */  
 });
