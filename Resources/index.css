@@ -29,6 +29,8 @@ main {
 #container {
     width: 100%;
     padding: 100px 0;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -42,22 +44,15 @@ main {
     margin: 0 auto;
 }
 
-/* .question2 {
-    display: flex;
-    flex-direction: column;
-    width: 50rem;
-    align-items: center;
-    margin: 25px auto;
-    display: none;
-}
-*/
-
 .gjta {
     display: flex;
     flex-direction: column;
-    width: 50rem;
+    width: 500px;
     align-items: center;
     margin: 0 auto;
+    background-color: gray;
+    text-align: center;
+    
 }
 
 #questHeader {
@@ -87,9 +82,7 @@ main {
 }
 
 .gjta {
-    background-color: gray;
-    text-align: center;
-    width: 50rem;
+    
 }
 
 .goodJob {
@@ -108,3 +101,4 @@ main {
     margin: 50px auto;
     color: red;
 }
+
