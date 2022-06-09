@@ -98,14 +98,18 @@ $(document).ready(() => {
         $('.incorrect-3').removeClass('active-1');
         $('.correct').removeClass('active-2');
         $('.goodJob').hide()
-        $('.tryAgain').hide()
-        rotateDiv($('.correct').html())
+        $('.tryAgain').hide() 
+    }).on('click', () => {
         moveToNext('correct-1', answerArray);
         moveToNext('question-text', questionArray)
         moveToNext('wrongAnswer1', q1WrongAnswer);
         moveToNext('wrongAnswer2', q2WrongAnswer);
         moveToNext('wrongAnswer3', q3WrongAnswer);
     })
+
+
+
+
 
     function  moveDiv(old, replace) {
         old.replaceWith(replace)
