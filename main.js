@@ -109,7 +109,7 @@ $(document).ready(() => {
 
     function  moveDiv(old, replace) {
         old.replaceWith(replace)
-       $('.question').append(old)
+       $('.question1').append(old)
     }
     
 
