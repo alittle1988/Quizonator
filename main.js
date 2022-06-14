@@ -6,11 +6,44 @@ $(document).ready(() => {
     const q2WrongAnswer = ['5', '3', '9', '0', '8', '13', '15', '19', '30', '7']
     const q3WrongAnswer = ['2', '9', '4', '8', '10','11', '12', '16', '15', '21']
    
+    let questionOArray = [
+        {
+            quest1: {
+                quest: 'What is 2 + 2?',
+                a: '4',
+                w: ['6', '5', '2']
+        }
+        }, {
+            quest2: {
+                quest: 'What is 3 + 3?',
+                a: '6',
+                w: ['8', '3', '9']
+            }
+        }, {
+            quest3: {
+                quest: 'What is 4 + 4?',
+                a: '8',
+                w: ['2', '9', '4']
+            }
+        }
+    ]
+    
+    const cycleArrays = () => {
+        for(i=0; i < questionOArray.length; i++) {
+            questionOArray.quest1.quest = document.getElementById('question-text.').innerHTML;
+            questionOArray.quest1.a = document.getElementById('correct-1').innerHTML;
+            questionOArray.quest1.w[0] = document.getElementById('wronganswer1').html;
+            questionOArray.quest1.w[1] = document.getElementById('wronganswer2').html;
+            questionOArray.quest1.w[2] = document.getElementById('wronganswer3').html;
+
+
+        }
+    }
 
 
     // assigning questions and answers to element ID
-    document.getElementById("question-text").innerHTML = questionArray[0];
-    document.getElementById("correct-1").innerHTML = answerArray[0];
+   // document.getElementById("question-text").innerHTML = questionArray[0];
+    //document.getElementById("correct-1").innerHTML = answerArray[0];
     
 
     let wrongAnswer1 =  q1WrongAnswer[0]
@@ -19,9 +52,9 @@ $(document).ready(() => {
     
 
     //Assigning wrong answers to an element ID
-    document.getElementById('wrongAnswer1').innerHTML = wrongAnswer1
-    document.getElementById('wrongAnswer2').innerHTML = wrongAnswer2
-    document.getElementById('wrongAnswer3').innerHTML = wrongAnswer3
+   // document.getElementById('wrongAnswer1').innerHTML = wrongAnswer1
+    //document.getElementById('wrongAnswer2').innerHTML = wrongAnswer2
+   // document.getElementById('wrongAnswer3').innerHTML = wrongAnswer3
 
   
 
