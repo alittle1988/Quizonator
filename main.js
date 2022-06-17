@@ -9,9 +9,9 @@ $(document).ready(() => {
     let questionOArray = [
         {
             quest1: {
-                quest: 'What is 2 + 2?',
-                a: '4',
-                w: ['6', '5', '2']
+                quest: ['What is 2 + 2?', 'What is 3 + 3?','What is 4 + 4?', 'What is 5 + 5?', 'What is 6 + 6?', 'What is 7 + 7?', 'What is 8 + 8?', 'What is 9 + 9?', 'What is 10 + 10?', 'What is 11 + 11?', 'Congrats you have finished🎉'],
+                a: ['4', '6', '8', '10', '12', '14', '16', '18', '20', '22' ],
+                w: [['6', '5', '2'], ['8', '3', '9'], []]
         }
         }, {
             quest2: {
@@ -187,7 +187,9 @@ $(document).ready(() => {
     }
 
 
-    
+    function startTest() {
+        alert('Start test now by clicking ok')
+    }
 
             
 });
