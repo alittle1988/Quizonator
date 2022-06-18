@@ -26,10 +26,20 @@ $(document).ready(() => {
     let index5 = 0;
 
 
-    function changeWrongA(target, array , index) {
-        document.getElementById(target).innerHTML = array[index + 1]
-         
+    function changeWrongA(target, array, index) {
+        for(let i = 0; i < array.length; i++) { 
+            document.getElementById(target).innerHTML = array[index +1]
+            return index + 1;
+            
+
+        }
     }
+   /* function iDontKnowYet(array, target, index){
+        for(let i = 0; i < array.length; i++) { 
+            document.getElementById(target).innerHTML = array[index]
+
+        }
+    }*/
 
 
     // moving through array when clicked
@@ -45,9 +55,7 @@ $(document).ready(() => {
    */
     
 
-    // assigning questions and answers to element ID
-    document.getElementById("question-text").innerHTML = questionArray[0];
-    document.getElementById("correct-1").innerHTML = answerArray[0];
+   
     
 
     
@@ -124,14 +132,15 @@ $(document).ready(() => {
         $('.incorrect-2').removeClass('active-1');
         $('.incorrect-3').removeClass('active-1');
         $('.correct').removeClass('active-2');
-        $('.goodJob').hide()
-        $('.tryAgain').hide()
-        rotateDiv($('.correct').html()) 
-        changeWrongA('question-text', questionArray, index1)
-        changeWrongA('wrongAnswer1', q1WrongAnswer, index2)
-        changeWrongA('wrongAnswer2', q2WrongAnswer, index3)
-        changeWrongA('wrongAnswer3', q3WrongAnswer, index4)
-        changeWrongA('correct-1', answerArray, index5)
+        $('.goodJob').hide();
+        $('.tryAgain').hide();
+        rotateDiv($('.correct').html()) ;
+        changeWrongA('question-text', questionArray, index1);
+        changeWrongA('wrongAnswer1', q1WrongAnswer, index2);
+        changeWrongA('wrongAnswer2', q2WrongAnswer, index3);
+        changeWrongA('wrongAnswer3', q3WrongAnswer, index4);
+        changeWrongA('correct-1', answerArray, index5);
+        
 
     })
 
