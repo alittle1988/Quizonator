@@ -61,6 +61,7 @@ main {
     text-align: center;
     border: 3px solid black;
     width: 100%;
+    font-size: 3rem;
 }
 
 .answer {
@@ -73,7 +74,7 @@ main {
     width: 100%;
     font-weight: bold;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 
