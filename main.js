@@ -1,42 +1,41 @@
 $(document).ready(() => {
-    
+    let score = 0;
     const questionArray = ['What is 2 + 2?', 'What is 3 + 3?','What is 4 + 4?', 'What is 5 + 5?', 'What is 6 + 6?', 'What is 7 + 7?', 'What is 8 + 8?', 'What is 9 + 9?', 'What is 10 + 10?', 'What is 11 + 11?', 'Congrats you have finished🎉'];
-    const answerArray = ["4", "6", "8", "10", "12", "14", "16", "18", "20", "22"]
+    const answerArray = ["4", "6", "8", "10", "12", "14", "16", "18", "20", "22", score.toString()]
     const q1WrongAnswer = ['6', '8', '2', '5', '4', '7', '13', '9', '10', '11']
     const q2WrongAnswer = ['5', '3', '9', '0', '8', '13', '15', '19', '30', '7']
     const q3WrongAnswer = ['2', '9', '4', '8', '10','11', '12', '16', '15', '21']
-    let score = 0;
-
+    
 
     // assigning elements to Array
-    document.getElementById("questHeader").innerHTML = questionArray[0];
-    document.getElementById("correct-1").innerHTML = answerArray[0];
-    document.getElementById('wrongAnswer1').innerHTML = q1WrongAnswer[0]
-    document.getElementById('wrongAnswer2').innerHTML = q2WrongAnswer[0]
-    document.getElementById('wrongAnswer3').innerHTML = q3WrongAnswer[0]
+    document.querySelector('.questHeader').innerHTML = questionArray[0];
+    document.querySelector('.correct').innerHTML = answerArray[0];
+    document.querySelector('.incorrect-1').innerHTML = q1WrongAnswer[0]
+    document.querySelector('.incorrect-2').innerHTML = q2WrongAnswer[0]
+    document.querySelector('.incorrect-3').innerHTML = q3WrongAnswer[0]
 
     // move answer/question boxes to next array
     const moveToNext = (location, array) => {
-        if(document.getElementById(location).innerHTML === array[0]){
-            document.getElementById(location).innerHTML = array[1];
-        } else if (document.getElementById(location).innerHTML === array[1]) {
-            document.getElementById(location).innerHTML = array[2];
-        } else if (document.getElementById(location).innerHTML === array[2]) {
-            document.getElementById(location).innerHTML = array[3];
-        } else if (document.getElementById(location).innerHTML === array[3]) {
-            document.getElementById(location).innerHTML = array[4];
-        } else if (document.getElementById(location).innerHTML === array[4]) {
-            document.getElementById(location).innerHTML = array[5];
-        } else if (document.getElementById(location).innerHTML === array[5]) {
-            document.getElementById(location).innerHTML = array[6];
-        } else if (document.getElementById(location).innerHTML === array[6]) {
-            document.getElementById(location).innerHTML = array[7];
-        } else if (document.getElementById(location).innerHTML === array[7]) {
-            document.getElementById(location).innerHTML = array[8];
-        } else if (document.getElementById(location).innerHTML === array[8]) {
-            document.getElementById(location).innerHTML = array[9];
-        } else if (document.getElementById(location).innerHTML === array[9]) {
-            document.getElementById(location).innerHTML = array[10];
+        if(document.querySelector(location).innerHTML === array[0]){
+            document.querySelector(location).innerHTML = array[1];
+        } else if (document.querySelector(location).innerHTML === array[1]) {
+            document.querySelector(location).innerHTML = array[2];
+        } else if (document.querySelector(location).innerHTML === array[2]) {
+            document.querySelector(location).innerHTML = array[3];
+        } else if (document.querySelector(location).innerHTML === array[3]) {
+            document.querySelector(location).innerHTML = array[4];
+        } else if (document.querySelector(location).innerHTML === array[4]) {
+            document.querySelector(location).innerHTML = array[5];
+        } else if (document.querySelector(location).innerHTML === array[5]) {
+            document.querySelector(location).innerHTML = array[6];
+        } else if (document.querySelector(location).innerHTML === array[6]) {
+            document.querySelector(location).innerHTML = array[7];
+        } else if (document.querySelector(location).innerHTML === array[7]) {
+            document.querySelector(location).innerHTML = array[8];
+        } else if (document.querySelector(location).innerHTML === array[8]) {
+            document.querySelector(location).innerHTML = array[9];
+        } else if (document.querySelector(location).innerHTML === array[9]) {
+            document.querySelector(location).innerHTML = array[10];
         } 
 
         }
@@ -66,12 +65,16 @@ $(document).ready(() => {
         $('.incorrect-3').addClass('active-1');
         $('.tryAgain').show();}
     })
+
     // adding class to correct answer when clicked
     $('.question1').on('click', '.correct', () => {
         $('.correct').addClass('active-2');
         $('.goodJob').show();
         $('.tryAgain').hide();
     })
+
+    
+
     //moving to next question when clicked
     $('.nextQuest').on('click', () => {
         $('.incorrect-1').removeClass('active-1');
@@ -80,15 +83,15 @@ $(document).ready(() => {
         $('.correct').removeClass('active-2');
         $('.goodJob').hide()
         $('.tryAgain').hide()
-        rotateDiv($('.correct').html()) 
-        moveToNext('correct-1', answerArray);
-        moveToNext('questHeader', questionArray)
-        moveToNext('wrongAnswer1', q1WrongAnswer);
-        moveToNext('wrongAnswer2', q2WrongAnswer);
-        moveToNext('wrongAnswer3', q3WrongAnswer);
-
+        rotateDiv($('.correct').html()); 
+        moveToNext('.correct', answerArray);
+        moveToNext('.questHeader', questionArray)
+        moveToNext('.incorrect-1', q1WrongAnswer);
+        moveToNext('.incorrect-2', q2WrongAnswer);
+        moveToNext('.incorrect-3', q3WrongAnswer);
+        
     })
-
+    
 
 
 
@@ -132,7 +135,8 @@ $(document).ready(() => {
                 moveDiv($('.correct'), $('.incorrect-2'));
                 break;
         }
-    }
-
-            
+    };
+    
+console.log(score)
+          
 });
