@@ -5,28 +5,15 @@ $(document).ready(() => {
     const q1WrongAnswer = ['6', '8', '2', '5', '4', '7', '13', '9', '10', '11']
     const q2WrongAnswer = ['5', '3', '9', '0', '8', '13', '15', '19', '30', '7']
     const q3WrongAnswer = ['2', '9', '4', '8', '10','11', '12', '16', '15', '21']
-   
+    let score = 0;
 
 
-    // assigning questions and answers to element ID
-    document.getElementById("question-text").innerHTML = questionArray[0];
+    // assigning elements to Array
+    document.getElementById("questHeader").innerHTML = questionArray[0];
     document.getElementById("correct-1").innerHTML = answerArray[0];
-    
-
-    let wrongAnswer1 =  q1WrongAnswer[0]
-    let wrongAnswer2 = q2WrongAnswer[0]
-    let wrongAnswer3 = q3WrongAnswer[0]
-    
-
-    //Assigning wrong answers to an element ID
-    document.getElementById('wrongAnswer1').innerHTML = wrongAnswer1
-    document.getElementById('wrongAnswer2').innerHTML = wrongAnswer2
-    document.getElementById('wrongAnswer3').innerHTML = wrongAnswer3
-
-  
-
-        
-    
+    document.getElementById('wrongAnswer1').innerHTML = q1WrongAnswer[0]
+    document.getElementById('wrongAnswer2').innerHTML = q2WrongAnswer[0]
+    document.getElementById('wrongAnswer3').innerHTML = q3WrongAnswer[0]
 
     // move answer/question boxes to next array
     const moveToNext = (location, array) => {
@@ -55,12 +42,6 @@ $(document).ready(() => {
         }
         
     
-
-    
-   
-
-
- 
     // adding class to  incorrect answer when clicked
     $('.question1').on('click', '.incorrect-1', () => {
         if ($('.correct').hasClass('active-2')){
@@ -101,7 +82,7 @@ $(document).ready(() => {
         $('.tryAgain').hide()
         rotateDiv($('.correct').html()) 
         moveToNext('correct-1', answerArray);
-        moveToNext('question-text', questionArray)
+        moveToNext('questHeader', questionArray)
         moveToNext('wrongAnswer1', q1WrongAnswer);
         moveToNext('wrongAnswer2', q2WrongAnswer);
         moveToNext('wrongAnswer3', q3WrongAnswer);
