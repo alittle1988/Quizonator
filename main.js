@@ -8,37 +8,47 @@ $(document).ready(() => {
     
 
     // assigning elements to Array
-    document.querySelector('.questHeader').innerHTML = questionArray[0];
-    document.querySelector('.correct').innerHTML = answerArray[0];
-    document.querySelector('.incorrect-1').innerHTML = q1WrongAnswer[0]
-    document.querySelector('.incorrect-2').innerHTML = q2WrongAnswer[0]
-    document.querySelector('.incorrect-3').innerHTML = q3WrongAnswer[0]
+    document.querySelector('.questHeader').innerText = questionArray[0];
+    document.querySelector('.correct').innerText = answerArray[0];
+    document.querySelector('.incorrect-1').innerText = q1WrongAnswer[0]
+    document.querySelector('.incorrect-2').innerText = q2WrongAnswer[0]
+    document.querySelector('.incorrect-3').innerText = q3WrongAnswer[0]
 
     // move answer/question boxes to next array
     const moveToNext = (location, array) => {
-        if(document.querySelector(location).innerHTML === array[0]){
-            document.querySelector(location).innerHTML = array[1];
-        } else if (document.querySelector(location).innerHTML === array[1]) {
-            document.querySelector(location).innerHTML = array[2];
-        } else if (document.querySelector(location).innerHTML === array[2]) {
-            document.querySelector(location).innerHTML = array[3];
-        } else if (document.querySelector(location).innerHTML === array[3]) {
-            document.querySelector(location).innerHTML = array[4];
-        } else if (document.querySelector(location).innerHTML === array[4]) {
-            document.querySelector(location).innerHTML = array[5];
-        } else if (document.querySelector(location).innerHTML === array[5]) {
-            document.querySelector(location).innerHTML = array[6];
-        } else if (document.querySelector(location).innerHTML === array[6]) {
-            document.querySelector(location).innerHTML = array[7];
-        } else if (document.querySelector(location).innerHTML === array[7]) {
-            document.querySelector(location).innerHTML = array[8];
-        } else if (document.querySelector(location).innerHTML === array[8]) {
-            document.querySelector(location).innerHTML = array[9];
-        } else if (document.querySelector(location).innerHTML === array[9]) {
-            document.querySelector(location).innerHTML = array[10];
+        if(document.querySelector(location).innerText === array[0]){
+            document.querySelector(location).innerText = array[1];
+        } else if (document.querySelector(location).innerText === array[1]) {
+            document.querySelector(location).innerText = array[2];
+        } else if (document.querySelector(location).innerText === array[2]) {
+            document.querySelector(location).innerText = array[3];
+        } else if (document.querySelector(location).innerText === array[3]) {
+            document.querySelector(location).innerText = array[4];
+        } else if (document.querySelector(location).innerText === array[4]) {
+            document.querySelector(location).innerText = array[5];
+        } else if (document.querySelector(location).innerText === array[5]) {
+            document.querySelector(location).innerText = array[6];
+        } else if (document.querySelector(location).innerText === array[6]) {
+            document.querySelector(location).innerText = array[7];
+        } else if (document.querySelector(location).innerText === array[7]) {
+            document.querySelector(location).innerText = array[8];
+        } else if (document.querySelector(location).innerText === array[8]) {
+            document.querySelector(location).innerText = array[9];
+        } else if (document.querySelector(location).innerText === array[9]) {
+            document.querySelector(location).innerText = array[10];
         } 
 
         }
+
+        // trying for loop for moveToNext function
+
+        /*
+
+        const moveToNext = (location, array) =>  {
+
+        }
+
+        */
         
     
     // adding class to  incorrect answer when clicked
