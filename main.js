@@ -78,6 +78,7 @@ function moveToNext() {
         wA2.textContent = wrongAnswer2[index];
         wA3.textContent = wrongAnswer3[index];
         clearDiv(a1, wA1, wA2, wA3);
+        rotateDiv()
     }
         
 
@@ -85,12 +86,26 @@ function moveToNext() {
 }
 
 
-
-console.log(qArray.length)
-
-
-
-
+function rotateDiv() {
+    randNum = Math.floor(Math.random() * 3);
+    const containerDiv = document.querySelector('.question1');
+    switch(randNum) {
+        case 0:
+            wA1.replaceWith(a1)
+            containerDiv.append(wA1);
+            break;
+        case 1:
+            wA2.replaceWith(q1)
+            containerDiv.append(wA2);
+            break;
+        case 2: 
+            wA3.replaceWith(a1)
+            containerDiv.append(wA3);
+            break;
+    }
+    console.log(randNum)
+    
+}
 
 
 
