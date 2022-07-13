@@ -1,12 +1,122 @@
+// declaring arrays
+let qArray = ['1 + 1', '2 + 2', '3 + 3', '4 + 4', '5 + 5'];
+let answerArray = ['2', '4', '6', '8', '10'];
+let wrongAnswer1 = ['3', '5', '1', '6', '5'];
+let wrongAnswer2 = ['1', '2', '3', '4', '3'];
+let wrongAnswer3 = ['0', '6', '4', '6', '9'];
+let index = 0;
+
+
+let question = document.querySelector('.questHeader');
+let a1 = document.querySelector('.correct')
+let wA1 = document.querySelector('.incorrect-1')
+let wA2 = document.querySelector('.incorrect-2');
+let wA3 = document.querySelector('.incorrect-3')
+
+
+
+question.textContent = qArray[index]
+a1.textContent = answerArray[index]
+wA1.textContent = wrongAnswer1[index];
+wA2.textContent = wrongAnswer2[index];
+wA3.textContent = wrongAnswer3[index];
+
+let score = 0;
+let docScore = document.querySelector('#score');
+
+function correctA(a) {
+    const goodJob = document.querySelector('.goodJob')
+    const tryAgain = document.querySelector('.tryAgain')
+    if(wrong1.style.backgroundColor === 'red' || wrong2.style.backgroundColor === 'red' || wrong3.style.backgroundColor === 'red') {
+        a.style.backgroundColor = 'green ';
+        goodJob.style.display = 'block';
+        tryAgain.style.display = 'none';
+
+    } else {
+    score = score + 1;
+    a.style.backgroundColor = 'green ' ;
+    goodJob.style.display = 'block';
+}
+}
+
+function incorrectAnswer(a) {
+    const correct1 = document.querySelector('#correct1')
+    const tryAgain = document.querySelector('.tryAgain')
+    if(correct1.style.backgroundColor === 'green'){
+
+    } else {
+    a.style.backgroundColor = 'red';
+    tryAgain.style.display = 'block'
+
+
+}
+}
+
+function clearDiv(a, b, c, d) {
+    a.style.backgroundColor = 'gray';
+    b.style.backgroundColor = 'gray';
+    c.style.backgroundColor = 'gray';
+    d.style.backgroundColor = 'gray';
+    document.querySelector('.goodJob').style.display = 'none';
+}
+
+
+function moveToNext() {
+    let i = index
+    if(i >= qArray.length - 1){
+        document.querySelector('.endOfQuiz').style.display = 'block'
+        document.querySelector('#questionDiv').style.display = 'none';
+        document.querySelector('.goodJob').style.display = 'none';
+        document.querySelector('.disclaimer').style.display = 'none';
+        docScore.textContent = score
+       
+    } else {
+        index = index + 1;
+        question.textContent = qArray[index];
+        a1.textContent = answerArray[index];
+        wA1.textContent = wrongAnswer1[index];
+        wA2.textContent = wrongAnswer2[index];
+        wA3.textContent = wrongAnswer3[index];
+        clearDiv(a1, wA1, wA2, wA3);
+    }
+        
+
+    
+}
+
+
+
+console.log(qArray.length)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 $(document).ready(() => {
     let score = 0;
     const questionArray = ['What is 2 + 2?', 'What is 3 + 3?','What is 4 + 4?', 'What is 5 + 5?', 'What is 6 + 6?', 'What is 7 + 7?', 'What is 8 + 8?', 'What is 9 + 9?', 'What is 10 + 10?', 'What is 11 + 11?', 'Congrats you have finished🎉'];
-    const answerArray = ["4", "6", "8", "10", "12", "14", "16", "18", "20", "22", score.toString()]
+    const answerArray = ["4", "6", "8", "10", "12", "14", "16", "18", "20", "22"]
     const q1WrongAnswer = ['6', '8', '2', '5', '4', '7', '13', '9', '10', '11']
     const q2WrongAnswer = ['5', '3', '9', '0', '8', '13', '15', '19', '30', '7']
     const q3WrongAnswer = ['2', '9', '4', '8', '10','11', '12', '16', '15', '21']
     
-
+    
     // assigning elements to Array
     document.querySelector('.questHeader').innerText = questionArray[0];
     document.querySelector('.correct').innerText = answerArray[0];
@@ -46,9 +156,10 @@ $(document).ready(() => {
 
         const moveToNext = (location, array) =>  {
 
+
         }
 
-        */
+        
         
     
     // adding class to  incorrect answer when clicked
@@ -87,21 +198,26 @@ $(document).ready(() => {
 
     //moving to next question when clicked
     $('.nextQuest').on('click', () => {
-        $('.incorrect-1').removeClass('active-1');
-        $('.incorrect-2').removeClass('active-1');
-        $('.incorrect-3').removeClass('active-1');
-        $('.correct').removeClass('active-2');
-        $('.goodJob').hide()
-        $('.tryAgain').hide()
-        rotateDiv($('.correct').html()); 
-        moveToNext('.correct', answerArray);
-        moveToNext('.questHeader', questionArray)
-        moveToNext('.incorrect-1', q1WrongAnswer);
-        moveToNext('.incorrect-2', q2WrongAnswer);
-        moveToNext('.incorrect-3', q3WrongAnswer);
+            keepScore(score)
+            $('.incorrect-1').removeClass('active-1');
+            $('.incorrect-2').removeClass('active-1');
+            $('.incorrect-3').removeClass('active-1');
+            $('.correct').removeClass('active-2');
+            $('.goodJob').hide()
+            $('.tryAgain').hide()
+            rotateDiv($('.correct').html()); 
+            moveToNext('.correct', answerArray);
+            moveToNext('.questHeader', questionArray)
+            moveToNext('.incorrect-1', q1WrongAnswer);
+            moveToNext('.incorrect-2', q2WrongAnswer);
+            moveToNext('.incorrect-3', q3WrongAnswer);
+            console.log(score)
+            
+            
+            
+       
         
     })
-    
 
 
 
@@ -147,6 +263,7 @@ $(document).ready(() => {
         }
     };
     
-console.log(score)
+
           
 });
+*/

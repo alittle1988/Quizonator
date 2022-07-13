@@ -40,26 +40,31 @@
     <!-- Main section -->
     <main>
         <div class="container-fluid" id="container">
+            <div class="endOfQuiz col-sm-12 col-md-6">
+                <h1 class="congrats p-3">🎉Congrats🎉 <br>You Finished the test</h3>
+                <h5 class="score">You got <span id="score"></span> out of 5 questions right!!</h5>
+            </div>
             <!-- Question 1-->
             <div class="col-sm-12 col-md-6 question1" id="questionDiv">
+                
                 <div class="p-3 questHeader"></div>
                 
-                <div class="answer incorrect-1" id="wrong1"></div>
+                <div onclick="incorrectAnswer(wrong1)" class="answer incorrect-1" id="wrong1"></div>
                 
                 
-                <div class="answer incorrect-2" id="wrong2"></div>
+                <div onclick="incorrectAnswer(wrong2)" class="answer incorrect-2" id="wrong2"></div>
                 
                 
-                <div class="answer correct"></div> 
+                <div onclick="correctA(correct1)" class="answer correct" id="correct1"></div> 
                 
                 
-                <div class="answer incorrect-3" id="wrong3"></div>
+                <div onclick="incorrectAnswer(wrong3)" class="answer incorrect-3" id="wrong3"></div>
                 
             </div>
             <div class=" col-sm-12 col-md-6 gjta">
                     <div class="goodJob">
                         <h1 class="text-center">Good Job!! 🎉🎉</h1>
-                        <h3 class="nextQuest">Next Question</h3>
+                        <h3  onclick="moveToNext()" class="nextQuest">Next Question</h3>
                     </div>
                     <div class="gjta tryAgain">
                         <h1 class="text-center">Try Again!!☹️</h1>
