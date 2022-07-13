@@ -6,7 +6,7 @@ let wrongAnswer2 = ['1', '2', '3', '4', '3'];
 let wrongAnswer3 = ['0', '6', '4', '6', '9'];
 let index = 0;
 
-
+// declaring varibles for location by class
 let question = document.querySelector('.questHeader');
 let a1 = document.querySelector('.correct')
 let wA1 = document.querySelector('.incorrect-1')
@@ -14,16 +14,18 @@ let wA2 = document.querySelector('.incorrect-2');
 let wA3 = document.querySelector('.incorrect-3')
 
 
-
+// assigning content location to array indexes 
 question.textContent = qArray[index]
 a1.textContent = answerArray[index]
 wA1.textContent = wrongAnswer1[index];
 wA2.textContent = wrongAnswer2[index];
 wA3.textContent = wrongAnswer3[index];
 
+// declaring score varaibles and display location by class
 let score = 0;
 let docScore = document.querySelector('#score');
 
+// function to change correct answer background color
 function correctA(a) {
     const goodJob = document.querySelector('.goodJob')
     const tryAgain = document.querySelector('.tryAgain')
@@ -39,6 +41,7 @@ function correctA(a) {
 }
 }
 
+// function to change incorrect answer background color
 function incorrectAnswer(a) {
     const correct1 = document.querySelector('#correct1')
     const tryAgain = document.querySelector('.tryAgain')
@@ -52,6 +55,7 @@ function incorrectAnswer(a) {
 }
 }
 
+// function to make correct/incorrect answers go back to original background color
 function clearDiv(a, b, c, d) {
     a.style.backgroundColor = 'gray';
     b.style.backgroundColor = 'gray';
@@ -60,7 +64,7 @@ function clearDiv(a, b, c, d) {
     document.querySelector('.goodJob').style.display = 'none';
 }
 
-
+// function to move through array indexes to display
 function moveToNext() {
     let i = index
     if(i >= qArray.length - 1){
@@ -85,7 +89,7 @@ function moveToNext() {
     
 }
 
-
+// function to randomly move correct answer div
 function rotateDiv() {
     randNum = Math.floor(Math.random() * 3);
     const containerDiv = document.querySelector('.question1');
