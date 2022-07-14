@@ -118,9 +118,9 @@ main {
 .questHeader {
     text-align: center;
     width: 100%;
-    font-size: 3rem;
+    font-size: 5rem;
 }
-
+ 
 .answer {
     border: 2px solid black;
     padding: 10px 0;
