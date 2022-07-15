@@ -1,0 +1,63 @@
+/* Universal section */
+html {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    position: relative;
+    top: 58px;
+    margin: 50px 0;
+    background-color: rgb(207, 218, 227);
+}
+
+/* Header Section*/
+
+.nav-link {
+    color: white;
+}
+
+#title {
+    font-size:  3rem;
+    padding-left: 3rem;
+}
+
+
+
+/* body section */
+
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+ .welcome h1 {
+    font-size: 4rem;
+ }
+
+ .welcome h3 {
+    margin: 50px 50px;
+    text-align: center;
+ }
+
+ .classSelector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+ .card {
+    width: 400px;
+    border: 10px solid black;
+    margin: 15px 25px;
+ }
+ .card img {
+    height: 250px;
+ }
+
+ /* classes section */
+
+ .card {
+    margin: 50px;
+ }
