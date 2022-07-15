@@ -7,8 +7,9 @@ html {
 
 main {
     position: relative;
-    top: 115px;
+    top: 58px;
     margin: 50px 0;
+    background-color: rgb(207, 218, 227);
 }
 
 /* Header Section*/
@@ -53,4 +54,10 @@ main {
  }
  .card img {
     height: 250px;
+ }
+
+ /* classes section */
+
+ .card {
+    margin: 50px;
  }
