@@ -25,6 +25,8 @@ main {
     padding-left: 3rem;
 }
 
+/*break point media section */
+
 @media only screen and (max-width: 620px) {
     #title {
         font-size: 1.5rem;
