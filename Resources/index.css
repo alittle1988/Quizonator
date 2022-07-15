@@ -54,6 +54,8 @@ main {
     .answerList {
         flex-wrap: wrap;
     }
+    
+    
 }
 
 /* quiz section */
@@ -100,19 +102,14 @@ main {
 
 .congrats {
     text-align: center;
-    border: 3px solid black;
     width: 100%;
     font-size: 3rem;
-    background-color: gray;
     margin: 0;
 }
 
 .score {
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
+    
     padding: 10px 0;
-    background-color: grey;
     width: 100%;
     font-weight: bold;
     text-align: center;
