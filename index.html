@@ -45,18 +45,18 @@
                 <h5 class="score">You got <span id="score"></span> right out of 10.<br>You got <span id="scoreP"></span></h5>
             </div>
             <!-- Question 1-->
-            <div class="col-sm-12 col-md-6 question1" id="questionDiv">
+            <div class="col-sm-12 col-md-8 col-lg-6 question1" id="questionDiv">
                 
                 <div class="p-3 questHeader "></div>
+                <div class="answerList">
+                    <div onclick="incorrectAnswer(wrong1)" class="answer   incorrect-1" id="wrong1"></div>
                 
-                    <div onclick="incorrectAnswer(wrong1)" class="answer  incorrect-1" id="wrong1"></div>
-                
-                    <div onclick="incorrectAnswer(wrong2)" class="answer incorrect-2" id="wrong2"></div>
-                
-                    <div onclick="correctA(correct1)" class="answer  correct" id="correct1"></div> 
+                    <div onclick="incorrectAnswer(wrong2)" class="answer  incorrect-2" id="wrong2"></div>
+                    
+                    <div onclick="correctA(correct1)" class="answer   correct" id="correct1"></div> 
             
-                    <div onclick="incorrectAnswer(wrong3)" class="answer incorrect-3" id="wrong3"></div>
-                
+                    <div onclick="incorrectAnswer(wrong3)" class="answer  incorrect-3" id="wrong3"></div>
+                </div>
             </div>
             <div class=" col-sm-12 col-md-6 gjta">
                     <div class="goodJob">

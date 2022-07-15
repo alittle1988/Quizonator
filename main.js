@@ -11,7 +11,8 @@ let question = document.querySelector('.questHeader');
 let a1 = document.querySelector('.correct')
 let wA1 = document.querySelector('.incorrect-1')
 let wA2 = document.querySelector('.incorrect-2');
-let wA3 = document.querySelector('.incorrect-3')
+let wA3 = document.querySelector('.incorrect-3');
+
 
 
 // assigning content location to array indexes 
@@ -100,7 +101,7 @@ function moveToNext() {
 // function to randomly move correct answer div
 function rotateDiv() {
     randNum = Math.floor(Math.random() * 3);
-    const containerDiv = document.querySelector('.question1');
+    const containerDiv = document.querySelector('.answerList');
     switch(randNum) {
         case 0:
             wA1.replaceWith(a1)
@@ -118,5 +119,4 @@ function rotateDiv() {
     
     
 }
-
 

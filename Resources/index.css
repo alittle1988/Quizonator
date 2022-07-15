@@ -25,7 +25,7 @@ main {
     padding-left: 3rem;
 }
 
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 620px) {
     #title {
         font-size: 1.5rem;
     }
@@ -51,6 +51,9 @@ main {
         border-radius: 0;
         margin: 0;
     }
+    .answerList {
+        flex-wrap: wrap;
+    }
 }
 
 /* quiz section */
@@ -72,6 +75,7 @@ main {
     margin: 0 auto;
 }
 
+
 .endOfQuiz {
     display: none;
     flex-direction: column;
@@ -87,7 +91,6 @@ main {
     align-items: center;
     width: 80%;
     margin: 22.5px auto;
-    background-color: gray;
     text-align: center;
     border-radius: 25px;
     
@@ -120,18 +123,29 @@ main {
     width: 100%;
     font-size: 5rem;
 }
+
+.answerList {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
  
 .answer {
     border: 2px solid black;
     padding: 10px 0;
     background-color: grey;
-    width: 90px;
+    width: 100%;
     font-weight: bold;
     text-align: center;
     font-size: 3rem;
-    margin: 50px auto;
+    margin: 20px;
     border-radius: 50%;
     
+}
+
+.answer:hover {
+    border-color: white;
     
 }
 
