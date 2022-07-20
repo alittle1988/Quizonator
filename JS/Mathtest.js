@@ -36,11 +36,14 @@ function makingNewArray() {
     document.querySelector('#questionDiv').style.display = 'block';
     document.querySelector('.buttonDiv').style.display = 'none';
     document.querySelector('.disclaimer').style.display = 'flex';
+    document.querySelector('.endOfQuiz').style.display = 'none';
     question.textContent = qArray2[index];
     a1.textContent = answerArray2[index];
     wA1.textContent = wAnswer1[index];
     wA2.textContent = wAnswer2[index];
     wA3.textContent = wAnswer3[index];
+    
+    
     
  }
 
