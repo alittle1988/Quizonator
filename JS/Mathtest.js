@@ -1,14 +1,9 @@
 // declaring arrays
-let qArray = ['6 + 5 = ?', '12 + 8  = ?', '3 + 4  = ?', '8 - 4 = ?', '5 - 5  = ?', '6 + 8  = ?', ' 7 + 7  = ?', '9 - 3  = ?', ' 9 + 10  = ?', '11 + 12  = ?'];
-let qArray2 = [];
-let answerArray = ['11', '20', '7', '4', '0', '14', '14', '6', '19', '23'];
-let answerArray2 =[];
-let wrongAnswer1 = ['10', '18', '10', '8', '5', '16', '10', '3', '14', '20'];
-let wAnswer1 = [];
-let wrongAnswer2 = ['15', '12', '5', '6', '2', '10', '12', '9', '17', '13'];
-let wAnswer2 = [];
-let wrongAnswer3 = ['12', '19', '4', '5', '10', '12', '0', '11', '16', '21'];
-let wAnswer3 = [];
+let qArray = [];
+let answerArray =[];
+let testArray = [];
+let testArray2 = [];
+
 let index = 0;
 
 // declaring varibles for location by class
@@ -18,7 +13,7 @@ let wA1 = document.querySelector('.incorrect-1')
 let wA2 = document.querySelector('.incorrect-2');
 let wA3 = document.querySelector('.incorrect-3');
 
-function makingNewArray() {
+/*function makingNewArray() {
     for(let i = 0; i < 5; i ++) {
      randNumb = Math.floor(Math.random() * qArray.length);
      qArray2.push(qArray[randNumb]);
@@ -37,7 +32,7 @@ function makingNewArray() {
     document.querySelector('.buttonDiv').style.display = 'none';
     document.querySelector('.disclaimer').style.display = 'flex';
     document.querySelector('.endOfQuiz').style.display = 'none';
-    question.textContent = qArray2[index];
+    question.textContent = qArray2[index] + ' = ?';
     a1.textContent = answerArray2[index];
     wA1.textContent = wAnswer1[index];
     wA2.textContent = wAnswer2[index];
@@ -45,16 +40,11 @@ function makingNewArray() {
     
     
     
- }
+ } */
 
 
 
-// assigning content location to array indexes 
-//question.textContent = qArray2[index]
-//a1.textContent = answerArray2[index]
-//wA1.textContent = wAnswer1[index];
-//wA2.textContent = wAnswer2[index];
-//wA3.textContent = wAnswer3[index];
+
 
 // declaring score varaibles and display location by class
 let score = 0;
@@ -103,7 +93,7 @@ function clearDiv(a, b, c, d) {
 // function to move through array indexes to display
 function moveToNext() {
     let i = index
-    if(i >= qArray.length - 1){
+    if(i >= 9){
         document.querySelector('.endOfQuiz').style.display = 'block'
         document.querySelector('#questionDiv').style.display = 'none';
         document.querySelector('.goodJob').style.display = 'none';
@@ -119,11 +109,17 @@ function moveToNext() {
        
     } else {
         index = index + 1;
-        question.textContent = qArray2[index];
-        a1.textContent = answerArray2[index];
-        wA1.textContent = wAnswer1[index];
-        wA2.textContent = wAnswer2[index];
-        wA3.textContent = wAnswer3[index];
+        question.textContent = qArray[index] + ' = ?';
+        a1.textContent = answerArray[index];
+        wA1.textContent = Math.floor(Math.random() * a1.textContent + 5);
+        wA2.textContent = Math.floor(Math.random() * a1.textContent + 5);
+        wA3.textContent = Math.floor(Math.random() * a1.textContent + 5); 
+        if(a1.textContent === wA1.textContent || wA2.textContent || wA3.textContent) {
+            wA1.textContent = Math.floor(Math.random() * a1.textContent);
+            wA2.textContent = Math.floor(Math.random() * a1.textContent);
+            wA3.textContent = Math.floor(Math.random() * a1.textContent);
+            
+        }
         clearDiv(a1, wA1, wA2, wA3);
         rotateDiv()
     }
@@ -155,3 +151,45 @@ function rotateDiv() {
 }
 
 
+
+function createArray() {
+    for(let i = 0;i < 2; i++) {
+        for(let j = 0; j < 10; j++) {
+            if(i === 0) {
+                testArray.push(j.toString())
+            }else {
+                testArray.push(i.toString() + j.toString())
+            }
+
+        }
+    }
+    for(let i = 0; i < 2; i++) {
+        for(let j = 0;j < 10; j++) {
+            if(i === 0) {
+                testArray2.push(j.toString())
+            }else {
+                testArray2.push(i.toString() + j.toString())
+            }
+        }
+    }
+    
+    for(let i = 0; i < 20; i++) {
+        thisNum = Math.floor(Math.random() * testArray.length)
+        thatNum = Math.floor(Math.random() * testArray2.length)
+        qArray.push(testArray[thisNum] + ' + ' + testArray2[thatNum])
+        answerArray.push(Number(testArray[thisNum]) + Number(testArray2[thatNum]))
+        
+        
+    }
+    document.querySelector('#questionDiv').style.display = 'block';
+    document.querySelector('.buttonDiv').style.display = 'none';
+    document.querySelector('.disclaimer').style.display = 'flex';
+    document.querySelector('.endOfQuiz').style.display = 'none';
+    question.textContent = qArray[index] + ' = ?';
+    a1.textContent = answerArray[index];
+    wA1.textContent = Math.floor(Math.random() * a1.textContent + 5);
+    wA2.textContent = Math.floor(Math.random() * a1.textContent + 5);
+    wA3.textContent = Math.floor(Math.random() * a1.textContent + 5);
+    
+    
+}
