@@ -67,7 +67,24 @@ main {
     
 }
 
+#questionDiv {
+    display: none;
+}
 
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.button {
+    height: 150px;
+    width: 300px;
+    background-color: rgb(59, 171, 59);
+    font-size: 2rem;
+    border: 2px solid black;
+    border-radius: 25px;
+}
 
 
 .question1 {
@@ -171,7 +188,7 @@ main {
 }
 
 .disclaimer {
-    display: flex;
+    display: none;
     flex-direction: column;
     flex-wrap: nowrap;
     width: 80%;
