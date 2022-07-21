@@ -24,3 +24,49 @@ main {
     font-size:  3rem;
     padding-left: 3rem;
 }
+
+/* Main Section */
+
+/* title */
+
+.heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.heading h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.heading h4 {
+    width: 75%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/*body section*/
+
+.container-fluid {
+    margin-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.classContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+
+.card {
+    margin: 50px auto;
+}
+
+.cardImg {
+    width: 300px;
+    height: 300px;
+}
