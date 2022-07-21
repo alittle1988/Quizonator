@@ -63,9 +63,32 @@ main {
  }
  .card {
     width: 400px;
-    border: 10px solid black;
+    border: 10px solid white;
     margin: 15px 25px;
+    box-shadow: 5px 10px 10px black ;
  }
+
+ .math:hover {
+   transform: scale(1.1, 1.15);
+   z-index: 100;
+   
+ }
+
+ .science:hover {
+   transform: scale(1.1, 1.15);
+   z-index: 100;
+ }
+
+ .history:hover {
+   transform: scale(1.1, 1.15);
+   z-index: 100;
+ }
+
+ .art:hover {
+   transform: scale(1.1, 1.15);
+   z-index: 100;
+ }
+
  .card img {
     height: 250px;
  }
