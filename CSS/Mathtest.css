@@ -190,12 +190,30 @@ main {
 
 .goodJob {
     display: none;
+    align-items: center;
     width: 100%;
 }
+
+
 
 .tryAgain {
     display: none;
     width: 100%;
+    
+}
+
+.nextQuest {
+    display: flex;
+    background-color: gray;
+    border-radius: 25px;
+    width: 50%;
+    margin: 0 auto;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    
 }
 
 .disclaimer {

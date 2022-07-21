@@ -187,9 +187,9 @@ function createArray() {
     document.querySelector('.endOfQuiz').style.display = 'none';
     question.textContent = qArray[index] + ' = ?';
     a1.textContent = answerArray[index];
-    wA1.textContent = Math.floor(Math.random() * a1.textContent + 5);
-    wA2.textContent = Math.floor(Math.random() * a1.textContent + 5);
-    wA3.textContent = Math.floor(Math.random() * a1.textContent + 5);
+    wA1.textContent = Math.floor(Math.random() * a1.textContent);
+    wA2.textContent = Math.floor(Math.random() * a1.textContent);
+    wA3.textContent = Math.floor(Math.random() * a1.textContent);
     
     
 }
