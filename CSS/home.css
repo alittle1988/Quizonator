@@ -64,7 +64,7 @@ main {
  .card {
     width: 400px;
     border: 10px solid white;
-    margin: 15px 25px;
+    margin:50px 25px;
     box-shadow: 5px 10px 10px black ;
  }
 
@@ -95,6 +95,4 @@ main {
 
  /* classes section */
 
- .card {
-    margin: 50px;
- }
+ 
