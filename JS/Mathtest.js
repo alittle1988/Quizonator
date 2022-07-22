@@ -13,34 +13,6 @@ let wA1 = document.querySelector('.incorrect-1')
 let wA2 = document.querySelector('.incorrect-2');
 let wA3 = document.querySelector('.incorrect-3');
 
-/*function makingNewArray() {
-    for(let i = 0; i < 5; i ++) {
-     randNumb = Math.floor(Math.random() * qArray.length);
-     qArray2.push(qArray[randNumb]);
-     answerArray2.push(answerArray[randNumb]);
-     wAnswer1.push(wrongAnswer1[randNumb]);
-     wAnswer2.push(wrongAnswer2[randNumb]);
-     wAnswer3.push(wrongAnswer3[randNumb]);
-     qArray.splice(randNumb, 1);
-     answerArray.splice(randNumb, 1);
-     wrongAnswer1.splice(randNumb, 1);
-     wrongAnswer2.splice(randNumb, 1);
-     wrongAnswer3.splice(randNumb, 1);
-     
-    };
-    document.querySelector('#questionDiv').style.display = 'block';
-    document.querySelector('.buttonDiv').style.display = 'none';
-    document.querySelector('.disclaimer').style.display = 'flex';
-    document.querySelector('.endOfQuiz').style.display = 'none';
-    question.textContent = qArray2[index] + ' = ?';
-    a1.textContent = answerArray2[index];
-    wA1.textContent = wAnswer1[index];
-    wA2.textContent = wAnswer2[index];
-    wA3.textContent = wAnswer3[index];
-    
-    
-    
- } */
 
 
 
@@ -111,15 +83,9 @@ function moveToNext() {
         index = index + 1;
         question.textContent = qArray[index] + ' = ?';
         a1.textContent = answerArray[index];
-        wA1.textContent = Math.floor(Math.random() * a1.textContent + 5);
-        wA2.textContent = Math.floor(Math.random() * a1.textContent + 5);
-        wA3.textContent = Math.floor(Math.random() * a1.textContent + 5); 
-        if(a1.textContent === wA1.textContent || wA2.textContent || wA3.textContent) {
-            wA1.textContent = Math.floor(Math.random() * a1.textContent);
-            wA2.textContent = Math.floor(Math.random() * a1.textContent);
-            wA3.textContent = Math.floor(Math.random() * a1.textContent);
-            
-        }
+        wA1.textContent =  Number(a1.textContent) + 3;
+        wA2.textContent =  Number(a1.textContent) - 4;
+        wA3.textContent =  Number(a1.textContent) + 5; 
         clearDiv(a1, wA1, wA2, wA3);
         rotateDiv()
     }
@@ -187,9 +153,9 @@ function createArray() {
     document.querySelector('.endOfQuiz').style.display = 'none';
     question.textContent = qArray[index] + ' = ?';
     a1.textContent = answerArray[index];
-    wA1.textContent = Math.floor(Math.random() * a1.textContent);
-    wA2.textContent = Math.floor(Math.random() * a1.textContent);
-    wA3.textContent = Math.floor(Math.random() * a1.textContent);
+    wA1.textContent = Number(a1.textContent) + 3;
+        wA2.textContent = Number(a1.textContent) - 4;
+        wA3.textContent = Number(a1.textContent) + 5; 
     
     
 }
