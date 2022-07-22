@@ -13,6 +13,8 @@ let wA1 = document.querySelector('.incorrect-1')
 let wA2 = document.querySelector('.incorrect-2');
 let wA3 = document.querySelector('.incorrect-3');
 
+const startTest = document.querySelector('.button');
+
 
 
 
@@ -159,3 +161,5 @@ function createArray() {
     
     
 }
+
+startTest.addEventListener("click", createArray);
