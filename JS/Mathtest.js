@@ -50,7 +50,8 @@ function incorrectAnswer(a) {
 
     } else {
     a.style.backgroundColor = 'red';
-    tryAgain.style.display = 'block'
+    tryAgain.style.display = 'block';
+    
 
 
 }
@@ -120,7 +121,7 @@ function rotateDiv() {
 }
 
 
-
+/* creating Arrays */
 function createArray() {
     for(let i = 0;i < 2; i++) {
         for(let j = 0; j < 10; j++) {
@@ -132,17 +133,17 @@ function createArray() {
 
         }
     }
-    for(let i = 0; i < 2; i++) {
+    for(let i = 0; i < 1; i++) {
         for(let j = 0;j < 10; j++) {
             if(i === 0) {
                 testArray2.push(j.toString())
             }else {
-                testArray2.push(i.toString() + j.toString())
+               testArray2.push(i.toString() + j.toString())
             }
         }
     }
     
-    for(let i = 0; i < 20; i++) {
+    for(let i = 0; i < 10; i++) {
         thisNum = Math.floor(Math.random() * testArray.length)
         thatNum = Math.floor(Math.random() * testArray2.length)
         qArray.push(testArray[thisNum] + ' + ' + testArray2[thatNum])
@@ -160,7 +161,8 @@ function createArray() {
         wA2.textContent = Number(a1.textContent) - 4;
         wA3.textContent = Number(a1.textContent) + 5; 
     
-    
+    console.log(testArray)
+    console.log(testArray2)
 }
-
+const startTest = document.querySelector('.button')
 startTest.addEventListener("click", createArray);
