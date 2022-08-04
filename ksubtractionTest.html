@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./CSS/Mathtest.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Quizonator</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+           <a class="navbar-brand h1" id="title">KIDS QUIZONATOR</a>
+           <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div id="my-nav" class="collapse navbar-collapse">
+               <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" tabindex="-1" aria-disabled="true">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mathHome.html" tabindex="-1" aria-disabled="true">Math</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Science</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Art</a>
+                    </li>
+               </ul>
+           </div>
+       </nav>
+    </header>
+
+    <!-- Main section -->
+    <main>
+        <div class="buttonDiv">
+            <h3>To Start test press botton below!</h3>
+            <h5>Good Luck!👍🏽</h5>
+            <button class="button">Start Test</button>
+        </div>
+        <div class="container-fluid" id="container">
+            <div class="endOfQuiz col-sm-12 col-md-6">
+                <h1 class="congrats p-3">🎉Congrats🎉 <br>You Finished the test</h3>
+                <h5 class="score">You got <span id="score"></span> right out of 10.<br>Thats <span id="scoreP"></span></h5>
+                <a href="ksubtractionTest.html"> <button class="resetButton">Start New Test</button> </a>
+            </div>
+            <!-- Question 1-->
+            <div class="col-sm-12 col-md-8 col-lg-6 question1" id="questionDiv">
+                
+                <div class="p-3 questHeader "></div>
+                <div class="answerList">
+                    <div onclick="incorrectAnswer(wrong1)" class="answer   incorrect-1" id="wrong1"></div>
+                
+                    <div onclick="incorrectAnswer(wrong2)" class="answer  incorrect-2" id="wrong2"></div>
+                    
+                    <div onclick="correctA(correct1)" class="answer   correct" id="correct1"></div> 
+            
+                    <div onclick="incorrectAnswer(wrong3)" class="answer  incorrect-3" id="wrong3"></div>
+                </div>
+            </div>
+            <div class=" col-sm-12 col-md-6 gjta">
+                    <div class="goodJob">
+                        <h1 class="text-center">🎉Good Job!! 🎉</h1>
+                        <h3  onclick="moveToNext()" class="nextQuest">Next Question</h3>
+                    </div>
+                    <div class="gjta tryAgain">
+                        <h1 class="text-center">Try Again!!☹️</h1>
+                     </div>
+            </div>
+            <div class=" col-sm-12 col-md-6 disclaimer">
+                <p>‼️Refreshing the page will start test over‼️</p>
+
+            </div>      
+            
+        </div>
+    </main>
+    
+
+
+
+
+
+    
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./JS/Ksubtraction.js" type="text/javascript"></script>
+</body>
+</html>
