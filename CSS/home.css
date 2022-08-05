@@ -74,26 +74,11 @@ main {
    
  }
 
- .math:hover {
-   transform: scale(1.1, 1.15);
-   z-index: 100;
-   
- }
-
- .science:hover {
+ .card:hover {
    transform: scale(1.1, 1.15);
    z-index: 100;
  }
 
- .history:hover {
-   transform: scale(1.1, 1.15);
-   z-index: 100;
- }
-
- .art:hover {
-   transform: scale(1.1, 1.15);
-   z-index: 100;
- }
 
  .card img {
     height: 250px;
