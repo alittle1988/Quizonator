@@ -1,18 +1,11 @@
-/* Universal section */
-html {
-    font-size: 16px;
+* {
     margin: 0;
     padding: 0;
 }
 
-main {
-    position: relative;
-    top: 115px;
-    margin: 50px 0;
+html{
+    font-size: 16px;
 }
-
-
-
 
 /* Header Section*/
 
@@ -25,25 +18,26 @@ main {
     padding-left: 3rem;
 }
 
-/* Main Section */
+@media only screen and (max-width: 620px) {
+   #title {
+      font-size: 1.5rem;
+   }
+}
 
-/* title */
+main {
+    position: relative;
+    top: 115px;
+    margin: 50px 0;
+    text-align: center;
+}
 
 .heading {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 0 100px;
 }
 
 .heading h1 {
-    width: 100%;
-    text-align: center;
-}
+    padding: 20px;
 
-.heading h4 {
-    width: 75%;
-    text-align: center;
-    padding-top: 50px;
 }
 
 /*body section*/
