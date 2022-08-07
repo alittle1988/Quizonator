@@ -67,6 +67,12 @@ main {
     
 }
 
+.timer{
+    color: red;
+    font-size: 1.25rem;
+    opacity: .1;
+}
+
 #questionDiv {
     display: none;
 }

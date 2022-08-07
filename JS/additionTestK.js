@@ -12,12 +12,7 @@ let a1 = document.querySelector('.correct')
 let wA1 = document.querySelector('.incorrect-1')
 let wA2 = document.querySelector('.incorrect-2');
 let wA3 = document.querySelector('.incorrect-3');
-
-//const startTest = document.querySelector('.button');
-//const incorrectBtn = document.querySelector('.answerList', '.')
-
-
-
+const timerDiv = document.querySelector('.timer')
 
 
 
@@ -75,10 +70,10 @@ function moveToNext() {
         document.querySelector('.goodJob').style.display = 'none';
         document.querySelector('.disclaimer').style.display = 'none';
         numScore.textContent = score;
-        
         docScore.textContent = (score / 10).toLocaleString('en-US', {
             style: 'percent'
         });
+        
         
         
             
@@ -164,5 +159,29 @@ function createArray() {
     console.log(testArray)
     console.log(testArray2)
 }
-const startTest = document.querySelector('.button')
-startTest.addEventListener("click", createArray);
+
+//creating timer function
+
+function startTimer() {
+    let sec = 0;
+    let min = 0
+    let timer = setInterval(function() {
+      timerDiv.innerHTML= `Timer ${min}.${sec}`;
+      sec++;  
+      if(sec >= 600) {
+        sec = 0
+        min++
+      }
+    }, 100);
+    
+}
+/* work on stoping timer and displaying the time when test is finished*/
+//starting test
+/*const startTest = document.querySelector('.button')
+startTest.addEventListener("click", function() {
+    
+    startTimer()
+    createArray()
+});
+
+*/
